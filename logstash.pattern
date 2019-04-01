@@ -1,7 +1,6 @@
 
 
-%{TIMESTAMP_ISO8601:logtime}\|%{WORD:loglevel}\|%{WORD:app}%{SPACE}%{WORD:app}%{SPACE}%{WORD:app}\|%{NUMBER:threadid}\|%{JAVACLASS:class}\|%{USERNAME:user}\|%{IP:userIp}\|%{IP:appIp}\|%{NUMBER:port}\|%{URIPROTO:protocol}|%{WORD:uri}|%{WORD:status}|%{WORD:logmessage}
-
+%{TIMESTAMP_ISO8601:logtime}\|%{WORD:loglevel}\|%{WORD:app}%{SPACE}%{WORD:app}%{SPACE}%{WORD:app}\|%{NUMBER:threadid}\|%{JAVACLASS:class}\|%{USERNAME:user}\|%{IP:userIp}\|%{IP:appIp}\|%{NUMBER:port}\|%{URIPROTO:protocol}\/%{NUMBER:protocolVersion}\|%{URIPATH:uri}\|%{WORD:status}\|%{GREEDYDATA:logmessage}
 
 
 
