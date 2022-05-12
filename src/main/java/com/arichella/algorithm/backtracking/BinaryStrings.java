@@ -1,6 +1,8 @@
 package com.arichella.algorithm.backtracking;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class BinaryStrings {
 
@@ -18,7 +20,16 @@ public class BinaryStrings {
     }
 
     public static void main(String[] args) {
+        int a = 5, b =8;
+        a = a ^ b;
+        System.out.println(a + " " + b);
+        b = a ^ b;
+        System.out.println(a + " " + b);
+        a = a ^ b ;
+        System.out.println(a + " " + b);
         BinaryStrings binaryStrings = new BinaryStrings();
         binaryStrings.binary(5);
+        Map<Character, Integer> map = new HashMap<>();
+        map.merge('a', 1, Integer::sum);
     }
 }

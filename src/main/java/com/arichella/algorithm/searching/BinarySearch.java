@@ -6,7 +6,7 @@ public class BinarySearch {
         int[] arr = {1, 5, 12, 48, 59, 68, 129, 149, 240, 259, 593};
 
         try {
-            if (findElement(593, arr)) {
+            if (findElement(1, arr)) {
                 System.out.println("Element Found");
             } else {
                 System.out.println("Element Not Found");
@@ -23,6 +23,7 @@ public class BinarySearch {
         while (true) {
             iterations++;
             int mid = (low + high) / 2;
+            System.out.println("Mid element " + arr[mid]);
             if (arr[mid] == key) {
                 System.out.println("Total # of iterations: " + iterations);
                 return true;
