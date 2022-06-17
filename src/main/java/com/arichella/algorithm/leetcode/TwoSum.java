@@ -3,11 +3,15 @@ package com.arichella.algorithm.leetcode;
 public class TwoSum {
 
     public static int[] twoSum(int[] nums, int target) {
-        for (int i=0; i < nums.length-1; i++) {
-            for (int j=i+1; j < nums.length; j++) {
-                if (nums[i] + nums[j] == target) {
-                    return new int[] {i, j};
-                }
+        int start = 0;
+        int end = nums.length-1;
+
+        while (start < end) {
+            if (nums[start] + nums[end] == target) {
+                return new int[] {start+1, end+1};
+            } else {
+                if (nums[start] + nums[end] > target) end--;
+                else start++;
             }
         }
 
@@ -20,7 +24,7 @@ public class TwoSum {
 
     private static void printArray(int[] twoSum) {
         for (int i : twoSum) {
-            System.out.println(i);
+            System.out.print(i + " ");
         }
     }
 }

@@ -24,7 +24,7 @@ public class TopKFrequent {
     }
 
     public static void main(String[] args) {
-        int[] topKFrequent = topKFrequent(new int[]{1}, 1);
+        int[] topKFrequent = topKFrequent(new int[]{1,5,6,2,1,4,3,5,6,1,7,5}, 4);
         for (int i : topKFrequent) {
             System.out.print(i + " ");
         }
