@@ -1,5 +1,6 @@
 package com.arichella.algorithm.leetcode.linkedlist;
 
+
 public class MyLinkedList {
 
     private int val;
